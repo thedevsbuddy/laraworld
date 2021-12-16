@@ -22,8 +22,12 @@ php artisan vendor:publish --provider="Devsbuddy\Laraworld\LaraworldServiceProvi
 
 ## Usage
 Load ```laraworldScripts``` In your ```app.blade.php``` or wherever needed use this
-```php
-@laraworldScripts
+```html
+<body>
+    <!-- ...Other stuffs -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @laraworldScripts
+</body>
 ```
 
 To show dropdown in any page for the country state and city you cab use
@@ -38,6 +42,27 @@ To show dropdown in any page for the country state and city you cab use
 
 That's it, You don't have to do anything else.
 Now it will automatically populate the countries and when you select a country it will show state list and so on.
+
+### Additional options
+
+#### Set default value
+If you want to set the default selected option / value you can do that as well.
+To set default value you can pass ```data-value``` property in the ```select``` element.
+
+**Example**
+```html
+<!-- 101 is the id of country (India) -->
+<select id="country" name="country" data-value="101"></select> 
+```
+If you want to use ```select2``` on your app we have also covered it.
+
+To initialized ```select2``` just add ```select2``` class in the select element.
+
+Just add ```select2``` CDN in the page.
+#### Example
+```html
+<select id="country" name="country" class="select2"></select>
+```
 
 ### Changelog
 
@@ -54,7 +79,6 @@ If you discover any security related issues, please email shoaibkhan@devsbuddy.c
 ## Credits
 
 -   [Shoaib Khan](https://github.com/devsbuddy)
--   [All Contributors](../../contributors)
 
 ## License
 

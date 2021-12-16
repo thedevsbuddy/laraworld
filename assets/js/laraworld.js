@@ -12,7 +12,7 @@ $(function () {
             url: "/laraworld/countries",
             method: "GET",
             success: function (res){
-                var countries = '';
+                var countries = "<option value=''>--Select Country--</option>";
                 res.data.forEach(function (country) {
                     if(country.id === countryElement.data('value')){
                         selected = 'selected';
@@ -34,7 +34,7 @@ $(function () {
             url: "/laraworld/states?country_id=" + countryId,
             method: "GET",
             success: function (res) {
-                var states = '';
+                var states = "<option value=''>--Select State--</option>";
                 res.data.forEach(function (state) {
                     if(state.id === stateElement.data('value')){
                         selected = 'selected';
@@ -57,7 +57,7 @@ $(function () {
             url: "/laraworld/cities?state_id=" + stateId,
             method: "GET",
             success: function (res) {
-                var cities = '';
+                var cities = "<option value=''>--Select City--</option>";
                 res.data.forEach(function (city) {
                     if(city.id === cityElement.data('value')){
                         selected = 'selected';
