@@ -21,7 +21,11 @@ php artisan vendor:publish --provider="Devsbuddy\Laraworld\LaraworldServiceProvi
 
 
 ## Usage
-Load ```laraworldScripts``` In your ```app.blade.php``` or wherever needed use this
+#### jQuery
+LaraWorld uses ajax to fetch the country state and city data which requires ```jQuery``` as a dependency. 
+So you will have to use ```jQuery``` in the page before adding ```laraworldScripte``` in the page.
+
+Load ```jQuery``` and ```laraworldScripts``` In your ```app.blade.php``` or wherever needed.
 ```html
 <body>
     <!-- ...Other stuffs -->
@@ -30,7 +34,7 @@ Load ```laraworldScripts``` In your ```app.blade.php``` or wherever needed use t
 </body>
 ```
 
-To show dropdown in any page for the country state and city you cab use
+To show dropdown in any page for the country, state and city you can use.
 ```html
 <!-- Country Dropdown -->
 <select name="country" id="country"></select>
@@ -60,11 +64,11 @@ If you want to use ```select2``` on your app we have also covered it.
 
 To initialized ```select2``` just add ```select2``` class in the select element.
 
-Just add ```select2``` CDN in the page.
 #### Example
 ```html
 <select id="country" name="country" class="select2"></select>
 ```
+**Note:- You will have to import ```select2``` CDN in the page.**
 
 ### Changelog
 
