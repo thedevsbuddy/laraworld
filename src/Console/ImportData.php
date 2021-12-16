@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\File;
 
 class ImportData extends Command
 {
-    protected $signature = 'world:import';
+    protected $signature = 'laraworld:import';
 
     protected $description = 'Create country state and city tables and import data.';
 

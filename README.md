@@ -14,11 +14,20 @@ You can install the package via composer:
 composer require thedevsbuddy/laraworld
 ```
 
-Publish the assets and resources
+Publish the assets
 ```bash
 php artisan vendor:publish --provider="Devsbuddy\Laraworld\LaraworldServiceProvider"
 ```
 
+Migrate database to add the country, state and city tables in the database.
+```bash
+php artisan migrate
+```
+
+Import Country, State and City data
+```bash
+php artisan laraworld:import
+```
 
 ## Usage
 #### jQuery
