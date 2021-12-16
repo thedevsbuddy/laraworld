@@ -54,6 +54,8 @@ To set default value you can pass ```data-value``` property in the ```select``` 
 <!-- 101 is the id of country (India) -->
 <select id="country" name="country" data-value="101"></select> 
 ```
+
+#### Select2
 If you want to use ```select2``` on your app we have also covered it.
 
 To initialized ```select2``` just add ```select2``` class in the select element.
