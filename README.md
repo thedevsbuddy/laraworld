@@ -19,12 +19,7 @@ Publish the assets
 php artisan vendor:publish --provider="Devsbuddy\Laraworld\LaraworldServiceProvider"
 ```
 
-Migrate database to add the country, state and city tables in the database.
-```bash
-php artisan migrate
-```
-
-Import Country, State and City data
+Create Country, State and City tables and Import data.
 ```bash
 php artisan laraworld:import
 ```
