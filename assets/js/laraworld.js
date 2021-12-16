@@ -1,44 +1,75 @@
 $(function () {
-    if($('#country').length){
+    var countryElement = $(document).find('#country');
+    var stateElement = $(document).find('#state');
+    var cityElement = $(document).find('#city');
+
+    if(countryElement.length){
         getCountries();
     }
     function getCountries(){
+        var selected = '';
         $.ajax({
-            url: "/world/countries",
+            url: "/laraworld/countries",
             method: "GET",
-            success: function (res) {
+            success: function (res){
                 var countries = '';
                 res.data.forEach(function (country) {
-                    countries += "<option value='" + country.id + "'>" + country.name + "</option>";
+                    if(country.id === countryElement.data('value')){
+                        selected = 'selected';
+                    } else {
+                        selected = '';
+                    }
+                    countries += "<option value='" + country.id + "' " + selected + ">" + country.name + "</option>";
                 });
-                $(document).find('#country').html(countries).trigger('change');
+                countryElement.html(countries).trigger('change');
+                if(countryElement.hasClass('select2')){
+                    countryElement.select2();
+                }
             }
         });
     }
     function getStates(countryId){
+        var selected = null;
         $.ajax({
-            url: "/world/states?country_id=" + countryId,
+            url: "/laraworld/states?country_id=" + countryId,
             method: "GET",
             success: function (res) {
                 var states = '';
                 res.data.forEach(function (state) {
-                    states += "<option value='" + state.id + "'>" + state.name + "</option>";
+                    if(state.id === stateElement.data('value')){
+                        selected = 'selected';
+                    } else {
+                        selected = '';
+                    }
+                    states += "<option value='" + state.id + "' " + selected + ">" + state.name + "</option>";
                 });
-                $(document).find('#state').html(states).trigger('change');
+                stateElement.html(states).trigger('change');
+                if(stateElement.hasClass('select2')){
+                    stateElement.select2();
+                }
             }
         });
     }
 
     function getCities(stateId){
+        var selected = null;
         $.ajax({
-            url: "/world/cities?state_id=" + stateId,
+            url: "/laraworld/cities?state_id=" + stateId,
             method: "GET",
             success: function (res) {
                 var cities = '';
                 res.data.forEach(function (city) {
-                    cities += "<option value='" + city.id + "'>" + city.name + "</option>";
+                    if(city.id === cityElement.data('value')){
+                        selected = 'selected';
+                    } else {
+                        selected = '';
+                    }
+                    cities += "<option value='" + city.id + "' " + selected + ">" + city.name + "</option>";
                 });
-                $(document).find('#city').html(cities).trigger('change');
+                cityElement.html(cities).trigger('change');
+                if(cityElement.hasClass('select2')){
+                    cityElement.select2();
+                }
             }
         });
     }

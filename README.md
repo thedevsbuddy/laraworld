@@ -1,9 +1,8 @@
-# Laravel World
+# LaraWorld
 A simple package for the world data (Country, State and City)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/devsbuddy/laravel-world.svg?style=flat-square)](https://packagist.org/packages/devsbuddy/laravel-world)
-[![Total Downloads](https://img.shields.io/packagist/dt/devsbuddy/laravel-world.svg?style=flat-square)](https://packagist.org/packages/devsbuddy/laravel-world)
-[GitHub Actions](https://github.com/devsbuddy/laravel-world/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/thedevsbuddy/laravel-world.svg?style=flat-square)](https://packagist.org/packages/thedevsbuddy/laraworld)
+[![Total Downloads](https://img.shields.io/packagist/dt/thedevsbuddy/laravel-world.svg?style=flat-square)](https://packagist.org/packages/thedevsbuddy/laraworld)
 
 Get the country state and city related data for your laravel projects.
 
@@ -12,12 +11,12 @@ Get the country state and city related data for your laravel projects.
 You can install the package via composer:
 
 ```bash
-composer require thedevsbuddy/laravel-world
+composer require thedevsbuddy/laraworld
 ```
 
 Publish the assets and resources
 ```bash
-php artisan vendor:publish --provider="Devsbuddy\LaravelWorld\LaravelWorldServiceProvider"
+php artisan vendor:publish --provider="Devsbuddy\Laraworld\LaraworldServiceProvider"
 ```
 
 
@@ -27,6 +26,18 @@ Load ```laraworldScripts``` In your ```app.blade.php``` or wherever needed use t
 @laraworldScripts
 ```
 
+To show dropdown in any page for the country state and city you cab use
+```html
+<!-- Country Dropdown -->
+<select name="country" id="country"></select>
+<!-- State Dropdown -->
+<select name="state" id="state"></select>
+<!-- City Dropdown -->
+<select name="city" id="city"></select>
+```
+
+That's it, You don't have to do anything else.
+Now it will automatically populate the countries and when you select a country it will show state list and so on.
 
 ### Changelog
 
