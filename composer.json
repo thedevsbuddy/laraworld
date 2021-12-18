@@ -1,6 +1,6 @@
 {
     "name": "thedevsbuddy/laraworld",
-    "version": "0.1.1",
+    "version": "0.1.5",
     "description": "A simple package for the world data (Country, State and City)",
     "keywords": [
         "devsbuddy",

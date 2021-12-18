@@ -1,3 +1,31 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Dec 11, 2021 at 08:22 PM
+-- Server version: 5.7.32
+-- PHP Version: 7.4.12
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `world`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `states`
+--
 
 DROP TABLE IF EXISTS `states`;
 CREATE TABLE `states` (
@@ -4996,3 +5024,39 @@ INSERT INTO `states` (`id`, `name`, `country_id`, `country_code`, `fips_code`, `
 (5063, 'Val-d\'Oise', 75, 'FR', NULL, '95', 'metropolitan department', '49.07518180', '1.82169140', '2021-12-11 14:03:34', '2021-12-11 14:51:42', 1, 'Q12784'),
 (5064, 'Clipperton', 75, 'FR', 'IP', 'CP', 'dependency', '10.28335410', '-109.22542150', '2021-12-11 12:21:55', '2021-12-11 12:42:43', 1, 'Q161258'),
 (5065, 'French Southern and Antarctic Lands', 75, 'FR', 'FS', 'TF', 'overseas territory', '-47.54466040', '51.28375420', '2021-12-11 12:22:02', '2021-12-11 12:43:21', 1, 'Q129003');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `states`
+--
+ALTER TABLE `states`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `country_region` (`country_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `states`
+--
+ALTER TABLE `states`
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5066;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `states`
+--
+ALTER TABLE `states`
+  ADD CONSTRAINT `country_region_final` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`);
+SET FOREIGN_KEY_CHECKS=1;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
