@@ -1,8 +1,12 @@
 # LaraWorld
 A simple package for the world data (Country, State and City)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/thedevsbuddy/laravel-world.svg?style=flat-square)](https://packagist.org/packages/thedevsbuddy/laraworld)
-[![Total Downloads](https://img.shields.io/packagist/dt/thedevsbuddy/laravel-world.svg?style=flat-square)](https://packagist.org/packages/thedevsbuddy/laraworld)
+<p align="center">
+<a href="https://travis-ci.org/thedevsbuddy/laravel-world"><img src="https://travis-ci.org/thedevsbuddy/laravel-world.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/thedevsbuddy/laravel-world"><img src="https://img.shields.io/packagist/dt/thedevsbuddy/laravel-world" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/thedevsbuddy/laravel-world"><img src="https://img.shields.io/packagist/v/thedevsbuddy/laravel-world" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/thedevsbuddy/laravel-world"><img src="https://img.shields.io/packagist/l/thedevsbuddy/laravel-world" alt="License"></a>
+</p>
 
 Get the country state and city related data for your laravel projects.
 
