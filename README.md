@@ -2,10 +2,10 @@
 A simple package for the world data (Country, State and City)
 
 <p align="center">
-<a href="https://travis-ci.org/thedevsbuddy/laravel-world"><img src="https://travis-ci.org/thedevsbuddy/laravel-world.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/thedevsbuddy/laravel-world"><img src="https://img.shields.io/packagist/dt/thedevsbuddy/laravel-world" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/thedevsbuddy/laravel-world"><img src="https://img.shields.io/packagist/v/thedevsbuddy/laravel-world" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/thedevsbuddy/laravel-world"><img src="https://img.shields.io/packagist/l/thedevsbuddy/laravel-world" alt="License"></a>
+<a href="https://travis-ci.org/thedevsbuddy/laraworld"><img src="https://travis-ci.org/thedevsbuddy/laraworld.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/thedevsbuddy/laraworld"><img src="https://img.shields.io/packagist/dt/thedevsbuddy/laraworld" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/thedevsbuddy/laraworld"><img src="https://img.shields.io/packagist/v/thedevsbuddy/laraworld" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/thedevsbuddy/laraworld"><img src="https://img.shields.io/packagist/l/thedevsbuddy/laraworld" alt="License"></a>
 </p>
 
 Get the country state and city related data for your laravel projects.
